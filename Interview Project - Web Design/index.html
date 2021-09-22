@@ -1,0 +1,137 @@
+
+<style>
+    body {
+  background-color: rgb(1, 3, 104);
+}
+
+h1 {
+  color: rgb(177, 177, 177);
+  text-align: left;
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 40px;
+} 
+
+p {
+  color: rgb(177, 177, 177);
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+}
+  h2 {
+  color: rgb(177, 177, 177);
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  }
+  .collapsible {
+      background-color: rgb(1, 3, 104);
+      color: rgb(177, 177, 177);
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    
+    .active, .collapsible:hover {
+      background-color: rgb(3, 0, 196);
+    }
+    
+    .collapsible:after {
+      content: '\002B';
+      color: white;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+    
+    .active:after {
+      content: "\2212";
+    }
+    
+    .content {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background-color: rgb(3, 0, 196);
+      font-size: 15px;
+    }
+    </style>
+    </head>
+    
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <body>
+    
+    <h1>David Lee</h1>
+    <img src="Pictures/david.png" width="200" height="200">
+    
+    <h2>Lets get to meet David!</h2>
+<button class="collapsible">Where David is From</button>
+<div class="content">
+  <p>David was born and has spent most of his time in New Jersey, but has spent time living in Turkey, Korea and Afganistan.</p>
+  <img src="Pictures/newjersey.png"> <img src="Pictures/turkey.png"> <img src="Pictures/korea.png"> <img src="Pictures/afganistan.png">
+</div>
+<button class="collapsible">David's Major & Why He Chose It</button>
+<div class="content">
+  <p>David chose Graphic Design as major. He chose this becasue he is very interested in computers, but also is drawn towards the artistic side of computers. He believes that Graphic Design was the best fit for his interests.</p>
+<img src="Pictures/graphicdesign.png">
+</div>
+<button class="collapsible">David's Extracurricular Activities at Lehigh</button>
+<div class="content">
+  <p>David does not currently participate in any extracurriculars at Lehigh, but wishes there were clubs such as an Archery club or a Parkore club. Maybe David will be able to bring those to Lehigh in the future!</p>
+</div>
+<button class="collapsible">David's Hobbies</button>
+<div class="content">
+  <p>In his free time David likes to write ideas down for stories to make into animations on day. David is also a fan of gaming and sleeping. His current favorite game is Genshin Impact and will also play the main title Mario games.</p>
+<img src="Pictures/game.jpg">
+</div>
+<button class="collapsible">If David Could Have One Food For The Rest of His Life</button>
+<div class="content">
+  <p>David would have egg waffles if he could only have one food for the rest of his life. He did say it really depends on the day you ask him.</p>
+<img src="Pictures/egg.jpg">
+</div><button class="collapsible">David's Favorite Type of Music</button>
+<div class="content">
+  <p>David isn't very picky when it comes to the music he listens t0. If he had to choose one he said that Euro Beat remixes of popular songs would be his favoite at the momment.</p>
+</div>
+<button class="collapsible">If David Could Be Any Animal What Would It Be</button>
+<div class="content">
+  <p>David would like to be a panda if he could be an animal. He chose this becasue they are able to sleep a lot!</p>
+<img src="Pictures/images.png">
+</div>
+<button class="collapsible">What Is David's Favorite Sport to Watch & Play</button>
+<div class="content">
+  <p>David's favorite sport to watch and play is badminton. He said he really only enjoys watching sports that he plays.</p>
+<img src="Pictures/badminton.jpg">
+</div>
+<button class="collapsible">What Super Power Would David Like To Have</button>
+<div class="content">
+  <p>David would like to have super speed if he were able to have a super power.</p>
+<img src="Pictures/flash.jpg">
+</div>
+<button class="collapsible">What Would Do If He Won The Lottery</button>
+<div class="content">
+  <p>David would spend some of the money on creating some of the ideas he has, save some for his future and give the rest to his family.</p>
+</div>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
+</html>
